@@ -64,49 +64,6 @@ class Player:
             else:
                 valid_directions = ["up", "down"]
 
-        # Remove the directions that would collide with walls or other players trails
-        for direction in valid_directions.copy():
-            if direction == "up":
-                next_pos = (self.x, self.y - self.speed)
-                if next_pos[1] < 0:
-                    valid_directions.remove(direction)
-                for player in players:
-                    if player != self and next_pos in player.trail:
-                        other_player = player
-                        print(f"Player {self.color} collided with trail of Player {other_player.color}.")
-                        other_player_player_wins()
-                        return
-            elif direction == "down":
-                next_pos = (self.x, self.y + self.speed)
-                if next_pos[1] > HEIGHT - SIZE:
-                    valid_directions.remove(direction)
-                for player in players:
-                    if player != self and next_pos in player.trail:
-                        other_player = player
-                        print(f"Player {self.color} collided with trail of Player {other_player.color}.")
-                        other_player_player_wins()
-                        return
-            elif direction == "left":
-                next_pos = (self.x - self.speed, self.y)
-                if next_pos[0] < 0:
-                    valid_directions.remove(direction)
-                for player in players:
-                    if player != self and next_pos in player.trail:
-                        other_player = player
-                        print(f"Player {self.color} collided with trail of Player {other_player.color}.")
-                        other_player_player_wins()
-                        return
-            elif direction == "right":
-                next_pos = (self.x + self.speed, self.y)
-                if next_pos[0] > WIDTH - SIZE:
-                    valid_directions.remove(direction)
-                for player in players:
-                    if player != self and next_pos in player.trail:
-                        other_player = player
-                        print(f"Player {self.color} collided with trail of Player {other_player.color}.")
-                        other_player_player_wins()
-                        return
-
         # Choose the next direction randomly from the valid directions
         if valid_directions:
             self.direction = random.choice(valid_directions)
