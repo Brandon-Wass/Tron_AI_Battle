@@ -22,7 +22,7 @@ GAME_DURATION = 15 * 60  # Game duration in seconds
 def init_game():
     pygame.init()
     pygame.display.set_caption("Tron AI Battle")
-    return pygame.display.set_mode((WIDTH, HEIGHT), pygame.DOUBLEBUF)
+    return pygame.display.set_mode((WIDTH, HEIGHT), pygame.NOFRAME | pygame.DOUBLEBUF)
 
 from collections import deque
 
