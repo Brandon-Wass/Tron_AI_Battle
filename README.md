@@ -16,8 +16,8 @@ At the end of the game loop, the game display is refreshed and the FPS is paused
 
 ----------------------------
 
-Tron-like program written in python. This code consumes roughly 13% CPU when first launched while running on a Raspberry Pi 4B, but it becomes more CPU intensive as time progresses until it resets after the specified time.
+Tron-like program written in python.
 
-----------------------------
+This code consumes roughly 6%-9% CPU on a Raspberry Pi 4B.
 
-After modifying the color bit depth to 8 bit rather than 24 and FPS from 60 - 16, this program now starts out at roughly 3% CPU usage on the same system.
+This version of the code implements a trail length limiter to cut down the CPU usage.
