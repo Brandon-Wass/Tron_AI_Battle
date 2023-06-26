@@ -17,7 +17,7 @@ WIDTH = 1200
 HEIGHT = 692
 SIZE = 3  # Player size
 TRAIL_WIDTH = 1  # Trail width
-FPS = 60
+FPS = 16
 BG_COLOR = (0, 0, 0)
 GAME_DURATION = 60 * 60  # Game duration in seconds
 
