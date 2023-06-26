@@ -25,7 +25,7 @@ GAME_DURATION = 60 * 60  # Game duration in seconds
 pygame.init()
 
 # Set up the display
-screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.NOFRAME, 24) # 0=regular display window // pygame.NOFRAME=window that cannot be minimized or closed
+screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.NOFRAME, 8) # 0=regular display window // pygame.NOFRAME=window that cannot be minimized or closed
 pygame.display.set_caption("Tron AI Battle")
 clock = pygame.time.Clock()
 
