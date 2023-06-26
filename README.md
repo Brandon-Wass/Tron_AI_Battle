@@ -20,4 +20,4 @@ Tron-like program written in python. This code consumes roughly 13% CPU when fir
 
 ----------------------------
 
-After modifying the color bit depth to 8 bit rather than 24, this program now starts out at roughly 3% CPU usage on the same system.
+After modifying the color bit depth to 8 bit rather than 24 and FPS from 60 - 16, this program now starts out at roughly 3% CPU usage on the same system.
